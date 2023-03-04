@@ -1,0 +1,21 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'app1_entrega3/assets/img/img4_pacientes.jpg' %}" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Apúntate como paciente activo</h2>
+                        <p>Al hacerlo, entrarás en el registro de aquellos que optaron por recibir sus servicios a través de nuestra web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
