@@ -18,4 +18,20 @@
             </div>
         </div>
     </section>
+    <form style='margin: auto; width: 400px;' action="" method="GET">
+
+        <input style='margin: auto; width: 315px;' type="search" name="profesion" id="profesion">
+        <input type="submit" value="Buscar">
+        
+    </form>
+    {% if medico %}
+    <ul>
+        {% for medicos in medico %}
+            <li>{{medicos.nombre}} {{medicos.apellido}}, {{medicos.lugar_trabajo}}, matrícula {{medicos.numero_matricula}}.</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p style="margin: auto; width: 400px">No hay datos con esa descripción.</p>
+    {% endif %}
+    <p style="margin: auto; width: 400px; color: crimson;">{{respuesta}}</p>
 {% endblock %}

@@ -18,4 +18,16 @@
             </div>
         </div>
     </section>
+    {% if formulario.errors %}
+    <p style="color:rgba(252, 46, 87, 0.938)">Datos érroneos. Revisar. </p>
+    {% endif %}
+
+    <form style='margin: auto; width: 400px;' action="" method = "POST"> {% csrf_token %}
+
+        <table>
+            {{ formulario.as_table }}
+        </table>
+
+        <input style='margin: auto; width: 318px;' type="submit" value="Enviar">
+    </form>
 {% endblock %}

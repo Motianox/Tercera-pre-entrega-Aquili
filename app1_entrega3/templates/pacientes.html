@@ -11,11 +11,24 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="p-5">
-                        <h2 class="display-4">Apúntate como paciente activo</h2>
+                        <h2 class="display-4">Apúntate como paciente</h2>
                         <p>Al hacerlo, entrarás en el registro de aquellos que optaron por recibir sus servicios a través de nuestra web.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    {% if formulario.errors %}
+    <p style="color:rgba(252, 46, 87, 0.938)">Datos érroneos. Revisar. </p>
+    {% endif %}
+
+    <form style='margin: auto; width: 400px;' action="" method = "POST"> {% csrf_token %}
+
+        <table>
+            {{ formulario.as_table }}
+        </table>
+
+        <input style='margin: auto; width: 315px;' type="submit" value="Enviar">
+    </form>
 {% endblock %}
